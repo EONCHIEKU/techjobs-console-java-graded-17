@@ -122,17 +122,20 @@ public class TechJobs {
 
         //System.out.println("printJobs is not implemented yet");
         if (someJobs.size() == 0){
-            System.out.println("No Results");
+            System.out.print("No Results");
+            //return;
             return;
-        }
+        }else{
         for (HashMap<String, String> job : someJobs){
-            String jobInfo = "*****\n";
+            System.out.print("\n*****\n");
             for (Map.Entry<String, String> jobColumn: job.entrySet()){
-                jobInfo += (jobColumn.getKey() + ":" + jobColumn.getValue() + "\n");
+                System.out.println(jobColumn.getKey() + ": " + jobColumn.getValue());
             }
-            jobInfo += "*****\n";
+           //jobInfo += "*****";
+            System.out.println("*****");
 
-            System.out.println(jobInfo);
+           // System.out.println(jobInfo);
+            }
         }
     }
 }
